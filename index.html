@@ -1,218 +1,150 @@
 <!doctype html>
-<html lang="th"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ITDS211 · เรียน OS ตั้งแต่ศูนย์</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet">
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>ITDS211 | คู่มืออ่านสอบ 2 ชั่วโมง</title>
 <style>
-:root{--bg:#f7f8fa;--fg:#1c2430;--mut:#5d6878;--card:#fff;--ac:#1f4e9c;--acs:#e3ecfb;--bd:#d9dee6;--ok:#1b7f4b;--no:#b3261e;--k:#fbe9d6;--u:#e1f1e6;--h:#e6e3f7;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10151c;--fg:#e6eaf0;--mut:#9aa6b6;--card:#19212b;--ac:#7fa8f0;--acs:#22324b;--bd:#2c3745;--ok:#5fcf96;--no:#ff8a80;--k:#4a3520;--u:#1f3a2a;--h:#2d2a4d}}
-:root[data-theme="dark"]{--bg:#10151c;--fg:#e6eaf0;--mut:#9aa6b6;--card:#19212b;--ac:#7fa8f0;--acs:#22324b;--bd:#2c3745;--ok:#5fcf96;--no:#ff8a80;--k:#4a3520;--u:#1f3a2a;--h:#2d2a4d}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.75 "Noto Sans Thai",system-ui,sans-serif}
-main{max-width:860px;margin:auto;padding:12px 16px 60px}
-h1{font-size:1.5rem;margin:.6em 0 .2em}h2{font-size:1.25rem;margin:1.4em 0 .4em;color:var(--ac)}h3{font-size:1.05rem;margin:1em 0 .3em}
-nav{display:flex;gap:6px;overflow-x:auto;padding:6px 0 10px}
-nav button,.b{font:inherit;border:1px solid var(--bd);background:var(--card);color:var(--fg);border-radius:999px;padding:6px 14px;cursor:pointer;white-space:nowrap}
-nav button.on,.b.on{background:var(--ac);color:var(--bg);border-color:var(--ac)}
-.b:disabled{opacity:.35;cursor:not-allowed}
-.sec{display:none}.sec.on{display:block}
-.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px 16px;margin:12px 0}
-.tip{border-left:4px solid var(--ac);background:var(--acs);padding:8px 14px;border-radius:6px;margin:12px 0}
-table{border-collapse:collapse;width:100%;font-size:.92rem}td,th{border:1px solid var(--bd);padding:5px 8px;text-align:left}th{background:var(--acs)}
-pre{background:#0f1720;color:#dbe6f3;padding:12px;border-radius:8px;overflow-x:auto;font-size:.85rem;line-height:1.5}
-code{font-family:ui-monospace,Menlo,monospace}
-.tag{display:inline-block;padding:1px 10px;border-radius:999px;font-size:.8rem;font-weight:600;color:#1c2430}
-.k{background:var(--k)}.u{background:var(--u)}.h{background:var(--h)}
-.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.seg{padding:10px;text-align:center;border:1px solid var(--bd);cursor:pointer;background:var(--card)}
-.seg.on{background:var(--acs);border-color:var(--ac);font-weight:600}
-.st{width:92px;height:92px;border-radius:50%;border:2px solid var(--bd);display:flex;align-items:center;justify-content:center;font-weight:600;background:var(--card)}
-.st.on{background:var(--ac);color:var(--bg);border-color:var(--ac)}
-.out{font-family:ui-monospace,monospace;font-size:.85rem;background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:8px;min-height:2em}
-.bar{height:8px;background:var(--bd);border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--ac)}
-.ok{color:var(--ok)}.no{color:var(--no)}
-details{margin:6px 0}summary{cursor:pointer;font-weight:600}
-</style></head><body><main>
-<h1>ITDS211 Computer Architecture &amp; OS</h1>
-<div style="color:var(--mut)">เรียนจากศูนย์ · ครอบคลุม Chapter00 (ข้อมูลวิชา), Lecture 1 (Intro to OS), Lecture 2 (Process)</div>
-<nav id="nav"></nav>
+:root{--ink:#1c2c40;--muted:#5a6c7c;--paper:#f5f3ed;--white:#fff;--line:#dfe6e7;--accent:#db6742;--deep:#163d46;--mint:#ddf1e9;--gold:#fbeccf;scroll-behavior:smooth}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;font-size:16px;line-height:1.85}a{color:#236568;text-decoration:none}a:hover{text-decoration:underline}button{font:inherit} .topbar{background:var(--deep);color:#fff}.top-inner{max-width:1400px;margin:auto;padding:13px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:.8rem;letter-spacing:.15em;font-weight:700}.brand span{color:#a4dfcc}.top-caption{font-size:.8rem;color:#d5e8e3}.layout{max-width:1400px;margin:auto;display:grid;grid-template-columns:250px minmax(0,1fr);gap:44px;padding:34px 32px 90px}.sidebar{position:sticky;top:24px;align-self:start;max-height:calc(100vh - 48px);overflow:auto}.nav-label{font-size:.72rem;letter-spacing:.13em;color:#74837f;font-weight:bold;margin:0 0 12px}.sidebar nav a{display:block;border-left:2px solid #d9e4df;padding:7px 12px;color:#49635e;font-size:.85rem;line-height:1.5}.sidebar nav a:hover,.sidebar nav a:focus{border-color:var(--accent);color:#be4e30;text-decoration:none;background:#fff9f1}.side-note{margin-top:24px;padding:16px;background:#e4ede8;border-radius:12px;color:#466a5e;font-size:.8rem}.main{min-width:0}.hero{position:relative;overflow:hidden;background:var(--deep);color:#fff;border-radius:18px;padding:42px 48px;margin-bottom:28px}.hero:after{content:"";position:absolute;width:270px;height:270px;border:45px solid rgba(158,219,192,.10);border-radius:50%;right:-90px;top:-110px;pointer-events:none}.eyebrow{color:#b3ddce;font-size:.75rem;letter-spacing:.16em;font-weight:700}.hero h1{font-size:clamp(1.9rem,4vw,3.4rem);line-height:1.3;letter-spacing:-.03em;margin:12px 0}.hero p{color:#d8e9e4;max-width:720px;margin:0}.hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.hero-meta span{border:1px solid #71968b;border-radius:99px;padding:4px 12px;font-size:.75rem;color:#e6f3ee}.intro{display:flex;gap:20px;align-items:start;justify-content:space-between;margin:10px 2px 26px}.intro p{color:var(--muted);margin:0;max-width:690px}.print{flex-shrink:0;border:1px solid #cbd8d3;border-radius:8px;background:#fff;color:var(--deep);padding:8px 15px;cursor:pointer}.print:hover{background:#eaf4ee}.article section{scroll-margin-top:24px;background:#fff;border:1px solid #e5eae5;border-radius:16px;padding:34px 40px;margin-bottom:20px;box-shadow:0 5px 22px rgba(37,66,52,.035)}.section-kicker{font-size:.72rem;letter-spacing:.12em;color:#b15d40;font-weight:700;margin:0 0 7px}h2{font-size:1.55rem;line-height:1.45;margin:0 0 20px;color:#183b3d}h2:before{content:"";display:inline-block;width:9px;height:9px;background:var(--accent);border-radius:50%;vertical-align:middle;margin-right:12px}h3{font-size:1.12rem;line-height:1.5;color:#284b49;margin:30px 0 10px}h4{margin:20px 0 6px;color:#38544f}p{margin:10px 0 14px}li{margin:5px 0}strong{color:#173f3c}pre{background:#153b3f;color:#e8f8f0;border-radius:10px;padding:16px 19px;overflow:auto;font: .9rem/1.8 Consolas,"Courier New",monospace;white-space:pre}code{font-family:Consolas,"Courier New",monospace;background:#eef4f1;border-radius:4px;padding:2px 4px;color:#244944}pre code{padding:0;background:transparent;color:inherit}table{width:100%;border-collapse:collapse;margin:18px 0 22px;font-size:.92rem}th,td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid #e6ece8}th{background:#eaf4ef;color:#284d46;font-size:.84rem}tr:nth-child(even) td{background:#fafbf9}.table-wrap{overflow-x:auto}.formula,.callout,blockquote{margin:18px 0;background:#eaf5ef;border-left:4px solid #6caa8d;border-radius:0 10px 10px 0;padding:15px 20px}.warning{background:#fff4e5;border-left-color:#e4a651}.formula{font-weight:700;color:#24524c}blockquote p{margin:0}details{margin:11px 0;border:1px solid #dce9e1;background:#f8fbf9;border-radius:10px;padding:12px 16px}summary{cursor:pointer;font-weight:700;color:#285b4f}details[open]{background:#f0f8f3}details p:last-child{margin-bottom:0}.footer{font-size:.8rem;color:#72847e;padding:10px 4px}.skip{position:absolute;top:-100px;left:10px;background:#fff;padding:8px;z-index:3}.skip:focus{top:10px}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #f2a35f;outline-offset:3px}@media(max-width:900px){.layout{grid-template-columns:1fr;gap:18px;padding:20px 20px 60px}.sidebar{position:static;max-height:none}.sidebar nav{display:flex;overflow:auto;gap:6px;padding-bottom:4px}.sidebar nav a{white-space:nowrap;border:1px solid #d8e5dc;border-radius:99px;background:#fff;padding:7px 12px}.nav-label{margin-bottom:8px}.side-note{display:none}.hero{padding:32px}.article section{padding:28px}.top-inner{padding:12px 20px}}@media(max-width:520px){body{font-size:15px}.layout{padding:16px 12px 50px}.hero{padding:26px 23px;border-radius:14px}.hero h1{font-size:1.9rem}.article section{padding:22px 19px}.intro{display:block}.print{margin-top:14px}.top-caption{display:none}table{min-width:500px}pre{font-size:.78rem}.table-wrap{margin-right:-5px}}
+@media print{body{background:white;font-size:11pt}.topbar,.sidebar,.intro button{display:none}.layout{display:block;max-width:none;padding:0}.hero{background:white;color:#000;border:1px solid #aaa;padding:16px;break-inside:avoid}.hero p,.eyebrow,.hero-meta span{color:#333}.hero:after{display:none}.article section{box-shadow:none;border:0;padding:10px 0;break-inside:auto}.article section h2{break-after:avoid}details{display:block}details>*{display:block}pre{white-space:pre-wrap;background:#f2f2f2;color:#000}a{color:#000}table{font-size:9pt}details,table{break-inside:avoid}}
+</style></head><body><a class="skip" href="#main">ข้ามไปยังเนื้อหา</a><header class="topbar"><div class="top-inner"><div class="brand">ITDS<span>211</span> &nbsp; / &nbsp; STUDY NOTES</div><div class="top-caption">Computer Architecture &amp; Operating Systems</div></div></header><div class="layout"><aside class="sidebar" aria-label="สารบัญ"><p class="nav-label">สารบัญ / CONTENTS</p><nav><a href="#plan">แผนอ่าน 120 นาที</a><a href="#overview">01 ภาพรวมคอมพิวเตอร์</a><a href="#numbers">02 การแทนจำนวน</a><a href="#riscv">03 RISC-V และ CPU</a><a href="#cache">04 หน่วยความจำและ Cache</a><a href="#pipeline">05 Pipeline</a><a href="#io">06 I/O, Storage และ Parallel</a><a href="#process">07 OS และ Process</a><a href="#scheduling">08 CPU Scheduling</a><a href="#quiz">09 ทดสอบตัวเอง</a><a href="#cheatsheet">ชีทจำก่อนสอบ</a></nav><div class="side-note">ใช้สารบัญเพื่อข้ามไปยังบทที่ต้องการ แล้วลองทำโจทย์ก่อนเปิดดูเฉลย</div></aside><main class="main" id="main"><div class="hero"><div class="eyebrow">THE 120-MINUTE STUDY GUIDE</div><h1>อ่านให้เข้าใจ<br>ก่อนเข้าสอบ</h1><p>สรุปพื้นฐานสถาปัตยกรรมคอมพิวเตอร์และระบบปฏิบัติการ สำหรับคนเริ่มจากศูนย์ พร้อมสูตร ตัวอย่าง และโจทย์ฝึก</p><div class="hero-meta"><span>ITDS211</span><span>พื้นฐาน → ตัวอย่าง → ฝึกทำ</span><span>อ่านออฟไลน์ได้</span></div></div><div class="intro"><p>เริ่มจากแผนอ่านด้านล่าง แล้วเลือกหัวข้อที่ต้องทบทวน เน้นเรื่องที่มี ⭐ และลองตอบคำถามท้ายบทด้วยตัวเอง</p><button class="print" onclick="window.print()">พิมพ์ / บันทึก PDF</button></div><div class="article">
+<section id="plan" class="content-section">
+  <div class="section-kicker">เริ่มตรงนี้</div>
+  <h2>แผนอ่านใน 120 นาที</h2>
+  <p>ข้อสอบครอบคลุมทั้งสถาปัตยกรรมคอมพิวเตอร์และระบบปฏิบัติการ มีทั้งปรนัยและคำนวณ อ่านตามลำดับเวลา แล้วลองทำโจทย์โดยไม่ดูเฉลยก่อน</p>
+  <div class="table-wrap"><table><thead><tr><th>เวลา</th><th>เรื่อง</th><th>เป้าหมาย</th></tr></thead><tbody>
+    <tr><td>0–10 นาที</td><td>ภาพรวมคอมพิวเตอร์และ OS</td><td>แยก CPU, memory, OS, program และ process</td></tr>
+    <tr><td>10–30 นาที</td><td>เลขฐานและการแทนจำนวน</td><td>แปลงเลขและทำ two’s complement</td></tr>
+    <tr><td>30–45 นาที</td><td>RISC-V และ performance</td><td>อ่านคำสั่งและใช้สูตร CPU time</td></tr>
+    <tr><td>45–65 นาที</td><td>Cache และ pipeline</td><td>แยก tag/index/offset และ hazard</td></tr>
+    <tr><td>65–80 นาที</td><td>I/O, storage และ parallel</td><td>เก็บคะแนนข้อเปรียบเทียบ</td></tr>
+    <tr><td>80–100 นาที</td><td>Process และ system call</td><td>เข้าใจสถานะ process และ fork/exec</td></tr>
+    <tr><td>100–115 นาที</td><td>CPU scheduling</td><td>วาด Gantt chart และคำนวณเวลารอ</td></tr>
+    <tr><td>115–120 นาที</td><td>ทดสอบตัวเอง</td><td>ทำโจทย์โดยไม่ดูเฉลย</td></tr>
+  </tbody></table></div>
+  <aside class="callout"><strong>เวลาน้อยมาก?</strong> เริ่มจาก two’s complement, CPU time, cache, pipeline และ CPU scheduling แล้วทำแบบทดสอบท้ายบท</aside>
+</section>
 
-<section class="sec" id="s0"><h2>ข้อมูลวิชาและแผนการสอบ</h2>
-<p>วิชานี้รวมสองครึ่ง: <b>Computer Architecture (CA)</b> และ <b>Operating Systems (OS)</b> คะแนนสุดท้ายนำสองส่วนมารวมกัน</p>
-<div class="row"><div class="card" style="flex:1;min-width:240px"><b>ส่วน CA (50)</b><table><tr><td>สอบกลางภาค</td><td>30</td></tr><tr><td>การบ้าน</td><td>15</td></tr><tr><td>Quiz</td><td>5</td></tr></table></div>
-<div class="card" style="flex:1;min-width:240px"><b>ส่วน OS (50)</b><table><tr><td>Quiz</td><td>10%</td></tr><tr><td>Homework</td><td>10%</td></tr><tr><td>Final Exam</td><td>30%</td></tr></table></div></div>
-<div class="tip">⚠️ ลอกการบ้านหรือโปรเจกต์ของคนอื่น = <b>ZERO CREDIT</b> ทุกคนที่เกี่ยวข้อง</div>
-<h3>เป้าหมายรายวิชา (CLO)</h3>
-<table><tr><th>CLO</th><th>ผู้เรียนต้องทำได้</th></tr>
-<tr><td>1</td><td>อธิบายการจัดองค์กรของคอมพิวเตอร์ดิจิทัล: instruction execution, ISA, addressing mode, pipelining, parallelism</td></tr>
-<tr><td>2</td><td>ประเมิน performance metrics และอธิบาย memory hierarchy กับ I/O organisation</td></tr>
-<tr><td>3</td><td>อธิบาย process management, concurrency, synchronisation และวิเคราะห์ deadlock</td></tr>
-<tr><td>4</td><td>เข้าใจ memory management และ file systems</td></tr></table>
-<h3>หัวข้อ CA (ครึ่งแรก)</h3>
-<p>โครงสร้างและสถาปัตยกรรมคอมพิวเตอร์ · ส่วนประกอบพื้นฐาน · Computer functions &amp; Processor structure · Data representation, ISA และ Assembly · Memory organization, memory hierarchy, cache · I/O systems · Storage systems · Computing units · Multiprocessor architecture</p>
-<h3>หัวข้อ OS (ครึ่งหลัง) ลำดับคาบ</h3>
-<table><tr><th>คาบ</th><th>หัวข้อ</th></tr><tr><td>OS#1</td><td>Introduction to OS</td></tr><tr><td>OS#2</td><td>Process and Process Scheduling</td></tr><tr><td>OS#3</td><td>Synchronization</td></tr><tr><td>OS#4</td><td>Memory Management</td></tr><tr><td>OS#5</td><td>File Systems</td></tr><tr><td>OS#6</td><td>Disk and I/O Management</td></tr><tr><td>OS#7</td><td>Deadlock</td></tr></table>
-<p>ตำราหลักของ OS: <i>Operating Systems: Three Easy Pieces</i> (OSTEP, อ่านฟรีออนไลน์) นอกจากนี้ Tanenbaum &amp; Bos, Silberschatz et al. ตำรา CA: Hennessy &amp; Patterson, Stallings</p></section>
+<section id="overview" class="content-section">
+  <div class="section-kicker">01 / พื้นฐาน</div><h2>ภาพรวม: คอมพิวเตอร์ทำงานอย่างไร</h2>
+  <p>มองคอมพิวเตอร์เป็นโรงงาน: CPU อ่านและทำตามคำสั่ง, register เป็นพื้นที่เล็กและเร็วใกล้ CPU, RAM เป็นพื้นที่ทำงาน ส่วน SSD/HDD เก็บข้อมูลระยะยาว และ I/O เป็นช่องทางติดต่ออุปกรณ์ เช่น จอ คีย์บอร์ด และดิสก์</p>
+  <p><strong>Operating system (OS)</strong> คือผู้จัดการที่แบ่ง CPU และหน่วยความจำให้โปรแกรม พร้อมดูแลสิทธิ์และอุปกรณ์ ลำดับคร่าว ๆ คือ ผู้ใช้ → โปรแกรม → OS → hardware</p>
+  <h3>Architecture กับ Organization</h3><ul><li><strong>Architecture</strong> คือคุณสมบัติที่โปรแกรมเมอร์มองเห็น เช่น ชุดคำสั่ง (ISA), register และรูปแบบข้อมูล: เครื่องทำอะไรได้</li><li><strong>Organization</strong> คือวิธีสร้างเครื่องให้ทำงานตาม architecture เช่น วงจร cache และ bus: เครื่องทำได้อย่างไร</li></ul>
+  <h3>วงจรคำสั่ง: Fetch → Decode → Execute</h3><ol><li><strong>Fetch</strong> ดึงคำสั่งจากหน่วยความจำ</li><li><strong>Decode</strong> แปลว่าคำสั่งให้ทำอะไร</li><li><strong>Execute</strong> ทำงานตามคำสั่ง</li></ol>
+  <div class="table-wrap"><table><thead><tr><th>Register</th><th>หน้าที่</th></tr></thead><tbody><tr><td>PC</td><td>ตำแหน่งคำสั่งที่จะดึงต่อไป</td></tr><tr><td>IR</td><td>คำสั่งปัจจุบัน</td></tr><tr><td>MAR</td><td>address ของหน่วยความจำที่ต้องการติดต่อ</td></tr><tr><td>MBR / MDR</td><td>ข้อมูลที่อ่านจากหรือจะเขียนลงหน่วยความจำ</td></tr></tbody></table></div>
+  <p><strong>Von Neumann</strong> ใช้หน่วยความจำและทางส่งข้อมูลร่วมกันสำหรับคำสั่งกับข้อมูล ส่วน <strong>Harvard</strong> แยกส่วนคำสั่งกับข้อมูล ส่วน bus มี data bus ส่งข้อมูล, address bus ระบุตำแหน่ง และ control bus ส่งสัญญาณควบคุม</p>
+</section>
 
-<section class="sec" id="s1"><h2>OS คืออะไร ทำไมต้องเรียน</h2>
-<div class="card">OS เป็นซอฟต์แวร์ที่ใหญ่และซับซ้อนที่สุดชิ้นหนึ่ง แต่เรารันมันทุกวัน แนวคิดของ OS เช่น <b>abstraction, performance tuning, resource coordination</b> เอาไปใช้ที่อื่นได้ และเป็นพื้นฐานของ Computer Security และ Parallel computing</div>
-<h3>สามคำถามหลักของวิชา</h3>
-<div class="row"><span class="tag h">Virtualize ทรัพยากร</span><span class="tag h">สร้างโปรแกรม Concurrent ให้ถูกต้อง</span><span class="tag h">เก็บข้อมูลแบบ Persistent</span></div>
-<p>หัวข้อหลัก: <b>Process, Memory, Files, I/O</b></p>
-<h3>ส่วนประกอบของระบบคอมพิวเตอร์ (กดดู)</h3>
-<div class="row" id="comp"></div><div class="card" id="compd"></div>
-<h3>ลองเอง: Fetch-Decode-Execute</h3>
-<p>CPU ทำสามขั้นนี้กับ <i>ทุก</i> คำสั่ง แล้ววนซ้ำจนโปรแกรมจบ</p><div class="stp" data-k="fde"></div>
-<div class="tip">ทำไมต้องมี OS? วงจร Fetch-Decode-Execute ดูง่าย แต่ต้องมีคนจัดการอีกมาก เช่น รันหลายโปรแกรมพร้อมกัน แบ่ง memory ให้โปรแกรม และควบคุมการเข้าถึง I/O OS ทำให้ระบบ <b>ถูกต้อง มีประสิทธิภาพ และใช้ง่าย</b></div>
-<h3>3 บทบาทของ OS (กดเปิด)</h3>
-<details><summary>1) Virtualization ของ physical resources</summary>ทรัพยากรจริงมีจำกัด: CPU รันได้ไม่กี่คำสั่งในเวลาเดียว และ memory ต้องแบ่งกัน OS ทำให้ทรัพยากร <i>ดูเหมือนมีไม่จำกัด</i> เรียกเทคนิคนี้ว่า Virtualization บางครั้งเรียก OS ว่า virtual machine หรือ extended machine<br><b>CPU:</b> OS สลับระหว่าง Program 1, 2, 3 แล้วสั่ง CPU รันทีละคำสั่ง คำถามคือสลับอย่างไร และใครได้รันก่อน<br><b>Memory:</b> แต่ละโปรแกรมมี address space ของตัวเอง (virtual address เริ่มที่ 0x00000 เหมือนกัน) ถูกแมปไปยัง physical address ต่างกัน คำถามคือแมปอย่างไร จัดสรรอย่างไร และทำอย่างไรเมื่อ memory ไม่พอ</details>
-<details><summary>2) APIs (system calls / standard library)</summary>ให้ผู้ใช้และแอปสั่ง OS ได้ เช่น รันโปรแกรม เข้าถึงไฟล์ จัดสรร memory APIs เหล่านี้ <b>ซ่อนความซับซ้อนของฮาร์ดแวร์</b> (ฮาร์ดแวร์เป็น “ugly interface” OS ทำให้เป็น “beautiful interface” ให้แอปใช้)</details>
-<details><summary>3) Resource manager</summary>โปรแกรมที่รันพร้อมกันต้องแบ่ง CPU time, memory space, disk และ I/O devices OS จัดสรรเพื่อให้มี <b>efficiency</b> และ <b>fairness</b> สูง</details>
-<h3>เป้าหมายการออกแบบ OS</h3>
-<table><tr><td><b>Abstraction</b></td><td>ทำให้ระบบสะดวกและใช้ง่าย</td></tr><tr><td><b>Performance</b></td><td>ลด overhead ของการ virtualize และจัดการทรัพยากร</td></tr><tr><td><b>Protection</b></td><td>แยก process ออกจากกัน ไม่ให้ทำร้ายกัน</td></tr><tr><td>อื่นๆ</td><td>ประหยัดพลังงาน, security, mobility</td></tr></table>
-<h3>ประวัติศาสตร์ OS (กดแต่ละยุค)</h3><div class="row" id="gen"></div><div class="card" id="gend"></div>
-<h3>OS แบ่งตามประเภท</h3>
-<table><tr><td>Mainframe</td><td>OS/360</td></tr><tr><td>Server</td><td>UNIX (Linux, FreeBSD, AIX), Windows 2012 R2</td></tr><tr><td>Personal computer</td><td>Windows 7/10, Mac OS, Linux</td></tr><tr><td>Real-time</td><td>VxWorks, QNX</td></tr><tr><td>Mobile</td><td>Android, iOS</td></tr></table></section>
+<section id="numbers" class="content-section">
+  <div class="section-kicker">02 / พื้นฐานคำนวณ</div><h2>เลขฐานและการแทนจำนวน ⭐</h2>
+  <h3>เลขฐานสองและฐานสิบหก</h3><p>แต่ละหลักของเลขฐานสองมีค่าน้ำหนักเป็นกำลังของ 2 เช่น <code>101101₂ = 32 + 8 + 4 + 1 = 45₁₀</code></p><p>เลขฐานสิบหกหนึ่งหลักเท่ากับเลขฐานสอง 4 บิต: <code>1011 0010₂ = B2₁₆</code> โดย A = 10, B = 11 ไปจนถึง F = 15</p>
+  <div class="table-wrap"><table><thead><tr><th>จำนวนเต็ม n บิต</th><th>ค่าต่ำสุด</th><th>ค่าสูงสุด</th></tr></thead><tbody><tr><td>Unsigned</td><td>0</td><td>2<sup>n</sup> − 1</td></tr><tr><td>Signed two’s complement</td><td>−2<sup>n−1</sup></td><td>2<sup>n−1</sup> − 1</td></tr></tbody></table></div><p>ตัวอย่าง 8 บิต: unsigned คือ 0 ถึง 255; two’s complement คือ −128 ถึง 127</p>
+  <h3>Two’s complement</h3><p>วิธีหา −x: เขียน +x ให้ครบจำนวนบิต → กลับทุกบิต → บวก 1</p>
+  <pre><code>+3       0000 0011
+กลับบิต  1111 1100
+บวก 1    1111 1101  = −3</code></pre>
+  <p>ตัวอย่าง 5 − 3 คิดเป็น 5 + (−3) ใน 8 บิต:</p><pre><code>   0000 0101     +5
+ + 1111 1101     −3
+ -----------
+ 1 0000 0010</code></pre><p>เก็บเพียง 8 บิต ตัด carry ที่เกินออก ได้ <code>0000 0010</code> = 2 ถ้าจะอ่านเลขติดลบกลับเป็นฐานสิบ ให้กลับบิต บวก 1 เพื่อหาขนาด แล้วใส่เครื่องหมายลบ</p>
+  <aside class="callout"><strong>Overflow:</strong> บวกเลข signed เครื่องหมายเดียวกันแล้วผลเปลี่ยนเครื่องหมาย แสดงว่า overflow; carry ที่หลุดออกเพียงอย่างเดียวไม่ใช่เกณฑ์ตัดสิน signed overflow</aside>
+  <h3>Sign-magnitude</h3><p>บิตซ้ายสุดเป็นเครื่องหมาย 0 = บวก และ 1 = ลบ ส่วนที่เหลือเป็นขนาด เช่น +3 = <code>0000 0011</code> และ −3 = <code>1000 0011</code> แบบ 8 บิต ดูให้ชัดว่าโจทย์กำหนด sign-magnitude หรือ two’s complement เพราะบิตเดียวกันอาจมีค่าต่างกัน</p><p>บวกเลขที่เครื่องหมายต่างกัน: ลบขนาดแล้วใช้เครื่องหมายของจำนวนที่มีขนาดมากกว่า เช่น +5 + (−3) = +2 สไลด์มีใบงานฝึกบวกและลบแบบ 16 บิต</p>
+  <h3>IEEE 754 floating point</h3><p>Single precision มี 32 บิต: <strong>sign 1 บิต | exponent 8 บิต | fraction 23 บิต</strong> สำหรับเลขปกติ:</p><div class="formula">ค่า = (−1)<sup>sign</sup> × 1.fraction × 2<sup>exponent − 127</sup></div>
+  <p>ตัวอย่าง 6.5 = 110.1₂ = 1.101 × 2² ดังนั้น sign = 0, exponent = 2 + 127 = 129 = <code>10000001₂</code> และ fraction = <code>10100000000000000000000</code></p><p>Exponent ที่เป็น 0 หรือ 255 เป็นกรณีพิเศษ ไม่ใช้สูตรเลขปกติข้างต้นตรง ๆ</p>
+</section>
 
-<section class="sec" id="s2"><h2>Process: โปรแกรมที่กำลังรัน</h2>
-<div class="tip"><b>Process = a running program</b> การรันโปรแกรมด้วยมือยากเพราะมีหลายขั้นตอนและใช้ข้อมูลมาก OS จึงทำ abstraction นี้ให้ ผู้ใช้รันหลายโปรแกรมได้โดยไม่ต้องสนใจว่า CPU ว่างหรือไม่</div>
-<h3>เปรียบเทียบเป็นการอบขนม</h3>
-<table><tr><th>ในครัว</th><th>ในคอมพิวเตอร์</th></tr><tr><td>สูตรอาหาร (Recipe)</td><td>Program</td></tr><tr><td>วัตถุดิบ (Ingredient)</td><td>Input</td></tr><tr><td>คนอบ (Baker)</td><td>OS</td></tr><tr><td>เตาอบ (Oven)</td><td>Resources</td></tr><tr><td>การอบ (Baking)</td><td>Process</td></tr></table>
-<p><b>Program</b> คือลำดับคำสั่งพร้อมข้อมูล เก็บอยู่บน disk ส่วน OS จะ <b>load</b> โค้ดและ static data ลงใน address space ของ process ใน memory จึงกลายเป็น process</p>
-<h3>Address Space ของ Process (กดแต่ละส่วน)</h3>
-<div style="max-width:380px"><div class="seg" data-s="stack">stack (max)</div><div class="seg" style="background:var(--acs);color:var(--mut)">↓ พื้นที่ว่าง ↑</div><div class="seg" data-s="heap">heap</div><div class="seg" data-s="data">data</div><div class="seg" data-s="text">text (0)</div></div>
-<div class="card" id="segd">เลือกส่วนด้านบน</div>
-<h3>Machine state ที่ process ซ่อนไว้</h3>
-<p>Process ซ่อนรายละเอียดของ machine state คือ: <b>memory</b> (คำสั่งและข้อมูลอยู่ใน address space), <b>registers</b> (general purpose เช่น eax, ebx; program counter PC; stack pointer; frame pointer) และ <b>I/O devices</b> เช่น ไฟล์ที่เปิดอยู่</p>
-<h3>Process API (5 ความสามารถ)</h3>
-<table><tr><td><b>Create</b></td><td>เริ่มโปรแกรม จะเกิด process</td></tr><tr><td><b>Destroy</b></td><td>ส่วนใหญ่จบเอง แต่สั่ง kill ได้</td></tr><tr><td><b>Wait</b></td><td>รอ process อื่น</td></tr><tr><td><b>Misc Control</b></td><td>เช่น suspend / resume</td></tr><tr><td><b>Status</b></td><td>ดูเวลารันหรือ state</td></tr></table>
-<h3>ขั้นตอนสร้าง Process</h3>
-<ol><li>OS โหลด code และ static data จาก disk เข้า memory (code, data, heap, stack)</li><li>OS เตรียม I/O เริ่มต้นของ Unix: standard input, standard output, standard error</li><li>OS ตั้งคำสั่งแรก (เช่น <code>main()</code>)</li><li>OS ส่งต่อการควบคุม CPU ให้ process</li></ol>
-<h3>Process States: ลองสลับสถานะเอง</h3>
-<div class="row" id="stt" style="justify-content:space-around"></div><div class="row" id="stb" style="margin:8px 0"></div><div class="out" id="stn"></div>
-<ul><li><b>Running</b> CPU กำลังรันคำสั่งของ process</li><li><b>Ready</b> พร้อมรัน แต่ OS ยังไม่เลือก</li><li><b>Blocked</b> รอเหตุการณ์ ส่วนใหญ่คือ I/O ที่ยังไม่เสร็จ</li></ul>
-<h3>ตัวอย่างสองโปรเซส (เลื่อนเวลา)</h3>
-<input type="range" id="tl" min="1" max="10" value="1" style="width:100%"><div id="tlo"></div>
-<h3>Process Control Block (PCB)</h3>
-<p>OS ต้องติดตามข้อมูลของแต่ละ process เช่น state เพื่อ schedule ให้ถูก จึงใช้ <b>struct (ภาษา C)</b> ต่อหนึ่ง process เรียกว่า <b>PCB</b> และมี <b>Process Table</b> แมป PID ไปที่ PCB (กดดูตัวอย่าง)</p>
-<div class="row" id="pcbb"></div><div class="card" id="pcbd"></div>
-<details><summary>ตัวอย่าง PCB ใน xv6 (C)</summary><pre>struct proc {
-  char *mem;            // Start of process memory
-  uint sz;              // Size of process memory
-  char *kstack;         // Bottom of kernel stack
-  enum proc_state state;// Process state
-  int pid;              // Process ID
-  struct proc *parent;  // Parent process
-  void *chan;           // If !zero, sleeping on chan
-  int killed;           // If !zero, has been killed
-  struct file *ofile[NOFILE]; // Open files
-  struct inode *cwd;    // Current directory
-  struct context context;     // Switch here to run process
-  struct trapframe *tf; // Trap frame for current interrupt
-};
-// states: UNUSED, EMBRYO, SLEEPING, RUNNABLE, RUNNING, ZOMBIE
-struct context { int eip, esp, ebx, ecx, edx, esi, edi, ebp; }; // registers ที่ต้องเซฟ</pre></details></section>
+<section id="riscv" class="content-section">
+  <div class="section-kicker">03 / คำสั่งและความเร็ว</div><h2>RISC-V และประสิทธิภาพ CPU ⭐</h2>
+  <h3>อ่านคำสั่ง RISC-V</h3><p>คำสั่งคำนวณเขียน <strong>ปลายทางก่อน</strong>; <code>x0</code> มีค่า 0 เสมอ</p>
+  <pre><code>add  x5, x6, x7     # x5 = x6 + x7
+sub  x5, x6, x7     # x5 = x6 - x7
+addi x5, x6, 10     # x5 = x6 + 10
+lw   x5, 8(x6)      # โหลด word จาก address x6 + 8
+sw   x5, 12(x6)     # เก็บ word ที่ address x6 + 12
+beq  x5, x6, equal  # กระโดดถ้า x5 == x6
+bne  x5, x6, differ # กระโดดถ้า x5 != x6
+blt  x5, x6, less   # กระโดดถ้า x5 &lt; x6 แบบ signed</code></pre>
+  <p><code>lw</code>/<code>sw</code> ใช้ word 4 bytes; <code>ld</code>/<code>sd</code> ใช้ doubleword 8 bytes และ offset เป็น byte หาก <code>x10</code> เป็น address เริ่มต้นของ array ที่สมาชิกละ 8 bytes, <code>ld x5, 24(x10)</code> โหลด A[3] เพราะ 3 × 8 = 24</p><p><code>jal</code> กระโดดพร้อมเก็บที่อยู่สำหรับกลับ; <code>jalr</code> กระโดดผ่าน address ใน register ใช้กลับจากฟังก์ชันได้</p>
+  <h3>CPU time และ speedup</h3><div class="formula">CPU time = instruction count × CPI ÷ clock rate</div><p>จำนวนคำสั่ง 2 × 10⁹, CPI 1.5 และ clock 3 GHz: <code>(2 × 10⁹ × 1.5) ÷ (3 × 10⁹) = 1 วินาที</code></p><div class="formula">Speedup = เวลาเดิม ÷ เวลาใหม่</div><p>เดิม 10 วินาที ใหม่ 5 วินาที → speedup 2 เท่า Clock สูงกว่าไม่ได้รับประกันว่าเร็วกว่าเสมอ เพราะจำนวนคำสั่งและ CPI อาจต่างกัน</p>
+</section>
 
-<section class="sec" id="s3"><h2>UNIX Process API: fork, wait, exec</h2>
-<h3>โปรแกรม C พื้นฐาน</h3>
-<pre>#include &lt;stdio.h&gt;
-void main() {
-    int x;                              // ตัวแปรในเครื่อง (อยู่ใน stack)
-    x = 10;
-    printf(" Hello World \n");
-    printf(" value of x is %d\n", x);   // พิมพ์: value of x is 10
-}   // คอมไพล์: gcc -o first first.c   รัน: ./first</pre>
-<h3>fork(): สร้าง process ใหม่</h3>
-<ul><li>process ที่เรียก fork() คือ <b>parent</b> process ที่ถูกสร้างคือ <b>child</b></li><li>child เริ่มต้นเป็น <b>สำเนาตรงตัว</b> ของ parent แต่มี address space และ PCB เป็นของตัวเอง</li><li><b>PID</b> คือชื่อ (ตัวระบุ) ของ process</li><li>fork() คืนค่า <b>PID ของ child ให้ parent</b> และคืน <b>0 ให้ child</b> (ใช้แยกว่าใครคือใคร)</li></ul>
-<pre>int pid = fork();        // บรรทัดนี้ถูกรัน 2 ครั้ง โดย 2 process
-if (pid > 0) {           // parent: pid = PID ของ child
-    printf(" I am a parent process with PID = %d of child process %d\n", getpid(), pid);
-    wait(NULL);          // parent รอ child จบก่อน
-    exit(0);
-} else {                 // child: pid = 0
-    printf(" I am a child process with PID = %d\n", getpid());
-    printf(" My parent process with PID = %d\n", getppid());
-    exit(0);
-}</pre>
-<div class="row"><button class="b" id="fk">▶ รันโปรแกรม fork</button><button class="b" id="fkr">รีเซ็ต</button></div><div class="out" id="fko"></div>
-<h3>ลองคิด: fork หลายครั้งได้กี่ process?</h3>
-<p>ทุกครั้งที่ fork ทุก process ที่มีอยู่จะแตกเป็นสองเท่า ในตัวอย่างสไลด์: <code>fork()</code> หนึ่งครั้ง แล้ว <code>for(i&lt;2) fork()</code> รวม 3 ครั้ง ผลคือ 2³ = 8 process ลองเลื่อนดู</p>
-<div class="row">จำนวนครั้งที่ fork: <input type="range" id="fn" min="0" max="5" value="3"> <b id="fnv"></b></div><div class="row" id="fnb"></div>
-<h3>wait(): ให้ process รอ process อื่น</h3>
-<p>มีประโยชน์เมื่อต้องการให้ parent รอ child เช่น ให้ child พิมพ์ก่อนเสมอ ถ้าไม่ใช้ wait() ลำดับการพิมพ์ของสอง process <i>ไม่แน่นอน</i> (ตัวอย่าง fork2.c ในสไลด์มีผลลัพธ์ปนกัน เพราะ child ที่ parent จบก่อนยังรันต่อ)</p>
-<h3>exec(): เปลี่ยน process ให้เป็นโปรแกรมอื่น</h3>
-<div class="tip"><b>exec() ไม่สร้าง process ใหม่</b> มัน <i>แปลง</i> process ปัจจุบันให้เป็นโปรแกรมอื่น และถ้าสำเร็จจะ <b>ไม่ return</b> กลับมา (โค้ดหลัง exec จะไม่ถูกรัน)</div>
-<pre>pid = fork();
-if (pid == 0) {                    // child
-    execlp("/bin/ls", "/home", NULL); // child กลายเป็นโปรแกรม ls
-    printf("Child process again\n");  // ไม่ถูกรัน ถ้า exec สำเร็จ
-} else wait(NULL);                 // parent รอ child</pre>
-<p>มี 6 รูปแบบ: <code>execl, execv, execlp, execvp, execle, execvpe</code> (l = list ของ argument, v = vector argv, p = ค้นหาจาก PATH, e = ส่ง environment)</p>
-<div class="tip">สรุปสั้น: <b>fork</b> = ทำสำเนา · <b>exec</b> = เปลี่ยนโปรแกรม · <b>wait</b> = รอลูกจบ</div></section>
+<section id="cache" class="content-section">
+  <div class="section-kicker">04 / หน่วยความจำ</div><h2>Memory และ Cache ⭐</h2><p>โดยทั่วไปเรียงจากเร็ว เล็ก และแพงต่อ byte ไปช้า ใหญ่ และถูกกว่า: <strong>register → cache → RAM → SSD/HDD</strong></p><p>SRAM มักใช้ทำ cache และไม่ต้อง refresh; DRAM มักใช้เป็น RAM และต้อง refresh. Hit = พบข้อมูลใน cache; miss = ไม่พบและต้องไปหาระดับถัดไป</p><ul><li><strong>Temporal locality:</strong> ใช้ข้อมูลเดิมซ้ำในเวลาใกล้กัน เช่น ตัวแปรใน loop</li><li><strong>Spatial locality:</strong> ใช้ข้อมูลที่อยู่ใกล้กัน เช่น อ่าน array ทีละตัว</li></ul>
+  <h3>Average Memory Access Time</h3><div class="formula">AMAT = hit time + (miss rate × miss penalty)</div><p>Hit time 1 ns, miss rate 5% และ miss penalty 20 ns → 1 + (0.05 × 20) = <strong>2 ns</strong> ใช้หน่วยให้ตรงกัน และ miss penalty ในสูตรนี้หมายถึงเวลาเพิ่มเติมเมื่อ miss</p>
+  <h3>Direct-mapped cache</h3><p><strong>Offset</strong> เลือก byte ใน block; <strong>index</strong> เลือก cache line; <strong>tag</strong> ตรวจว่า line เก็บ block ที่ต้องการจริงหรือไม่</p>
+  <p>ตัวอย่าง address 32 บิต, cache 4 KiB, block 16 bytes: มี 4096 ÷ 16 = 256 lines; offset = log₂16 = 4 บิต; index = log₂256 = 8 บิต; tag = 32 − 8 − 4 = 20 บิต</p><div class="formula">| Tag 20 บิต | Index 8 บิต | Offset 4 บิต |</div>
+  <pre><code>block number = floor(byte address / block size)
+index        = block number mod จำนวน lines
+tag          = floor(block number / จำนวน lines)</code></pre><p>เช่น address 1200, block 16 bytes, 64 lines → block 75, index 11, tag 1 และ offset 0</p>
+  <h3>ชนิดและนโยบายเขียน</h3><ul><li><strong>Direct-mapped:</strong> block หนึ่งไปได้เพียง line เดียว</li><li><strong>Fully associative:</strong> block ไปได้ทุก line</li><li><strong>n-way set associative:</strong> block ไปได้หลาย line ภายใน set; จำนวน sets = lines ÷ n</li><li><strong>Write-through:</strong> เขียนทั้ง cache และ memory</li><li><strong>Write-back:</strong> เขียน cache ก่อน แล้วเขียนกลับ memory เมื่อจำเป็น</li></ul>
+</section>
 
-<section class="sec" id="s4"><h2>System Call และ Dual Mode</h2>
-<p>OS รัน process แบบ <b>Limited Direct Execution</b>: เริ่ม process แล้วปล่อยให้รันบน CPU โดยตรง (Direct Execution) แต่ OS และฮาร์ดแวร์ <b>จำกัด</b> ไม่ให้ user process เข้าถึงทรัพยากรระบบเองเพื่อความปลอดภัย แล้ว process จะขอใช้ I/O ได้อย่างไร?</p>
-<h3>Dual mode</h3>
-<div class="row"><span class="tag u">User mode (mode bit = 1)</span> เข้าถึงทรัพยากรได้จำกัด <span class="tag k">Kernel mode (mode bit = 0)</span> OS ทำ privileged operations ได้</div>
-<p>user process ขอทำงานพิเศษด้วย <b>system call</b> ตัวอย่าง: open, read, write, close, kill, signal, fork, wait, exec, getpid, link, unlink, mount, chdir, setuid, getuid, chown</p>
-<h3>System call กับ Standard library</h3>
-<table><tr><th>System call</th><th>Library call</th></tr><tr><td>open</td><td>fopen</td></tr><tr><td>close</td><td>fclose</td></tr><tr><td>read</td><td>fread, getchar, scanf, fscanf, getc, fgetc, gets, fgets</td></tr><tr><td>write</td><td>fwrite, putchar, printf, fprintf, putc, fputc, puts, fputs</td></tr><tr><td>lseek</td><td>fseek</td></tr></table>
-<p>library ห่อ system call เป็นฟังก์ชัน C ให้เรียกเหมือน procedure call ธรรมดา เช่น <code>printf</code> ไปเรียก <code>write()</code> ข้างใน</p>
-<div class="tip"><b>Trap</b> คือสัญญาณซอฟต์แวร์ที่โปรแกรมผู้ใช้ตั้งใจสร้างเพื่อสลับ CPU จาก user mode ไป kernel mode ให้ OS ทำ system call ที่ป้องกันไว้</div>
-<p><b>Trap table</b> บอกฮาร์ดแวร์ว่า <b>trap handler</b> ของแต่ละเหตุการณ์ (system call, keyboard interrupt) อยู่ที่ไหน · <b>Kernel stack</b> เก็บข้อมูลของ caller ให้กลับได้ถูก · <b>return-from-trap</b> คือคำสั่งพิเศษกลับไป process (ลดสิทธิ์)</p>
-<h3>เดินดูทีละขั้น</h3><div class="stp" data-k="sys"></div>
-<h3>ตัวอย่าง read(fd, nbytes, buffer)</h3>
-<p>โปรแกรม push พารามิเตอร์ (nbytes, &amp;buffer, fd) → call read → library ใส่รหัส read ใน register → trap เข้า kernel → Dispatch → sys call handler → กลับ library → เพิ่ม SP (เก็บ stack) → โปรแกรมทำต่อ</p></section>
+<section id="pipeline" class="content-section">
+  <div class="section-kicker">05 / สายการผลิตคำสั่ง</div><h2>Pipeline และ Hazard ⭐</h2><p>Pipeline ซ้อนขั้นตอนของหลายคำสั่ง เพิ่ม <strong>throughput</strong> หรือจำนวนคำสั่งที่เสร็จต่อหน่วยเวลา แต่ไม่รับประกันว่าเวลาของคำสั่งเดียวจะลดลง</p>
+  <div class="formula">IF → ID → EX → MEM → WB</div><p><strong>IF</strong> ดึงคำสั่ง · <strong>ID</strong> แปลคำสั่งและอ่าน register · <strong>EX</strong> คำนวณ · <strong>MEM</strong> เข้าถึง memory เมื่อจำเป็น · <strong>WB</strong> เขียนผลกลับ register เมื่อจำเป็น</p>
+  <div class="formula">ไม่มี stall: จำนวน cycles = N + k − 1</div><p>สำหรับ N คำสั่งและ k ขั้น เช่น 10 คำสั่งใน pipeline 5 ขั้น ใช้ 10 + 5 − 1 = 14 cycles</p>
+  <div class="table-wrap"><table><thead><tr><th>Hazard</th><th>เหตุ</th><th>แนวทางจัดการ</th></tr></thead><tbody><tr><td>Structural</td><td>แย่ง hardware เดียวกัน</td><td>เพิ่มหรือแยก resource</td></tr><tr><td>Data</td><td>คำสั่งใหม่รอผลคำสั่งก่อน</td><td>forwarding หรือ stall</td></tr><tr><td>Control</td><td>ยังไม่รู้ทางไปหลัง branch</td><td>predict, stall หรือ flush</td></tr></tbody></table></div>
+  <pre><code>ld  x1, 0(x2)
+add x3, x1, x4</code></pre><p>ใน pipeline 5 ขั้นตามแบบสไลด์ กรณี load-use ติดกันนี้ต้องมี 1 stall แม้มี forwarding เพราะข้อมูลยังมาไม่ทัน</p>
+</section>
 
-<section class="sec" id="s5"><h2>Context Switching</h2>
-<p>OS จะได้ CPU คืนเมื่อ: process <b>yield</b>, ถูก <b>block</b> (รอ I/O), สร้าง child แล้ว <b>wait</b>, หรือถูก <b>terminate</b> แต่ถ้า process วนลูปไม่รู้จบล่ะ? ใช้ <b>Timer Interrupt</b></p>
-<div class="tip"><b>Timer Interrupt:</b> อุปกรณ์ timer ส่ง interrupt ทุกกี่ millisecond ตัว interrupt handler ใน OS จะรัน ทำให้ OS <b>ได้ CPU คืนอย่างปลอดภัย</b> ตอนบูต OS บอกฮาร์ดแวร์ว่าจะรันโค้ดไหนเมื่อ timer ขัดจังหวะ แล้วเริ่ม timer</div>
-<p><b>Context switching</b> คือรูทีนของ OS เมื่อสลับ process ที่รันอยู่ ขั้นตอนรวม: 1) <b>เซฟ context (registers)</b> ของ process ที่รัน 2) <b>คืน context</b> ของอีก process</p>
-<h3>เดินดูทีละขั้น: A → B</h3><div class="stp" data-k="ctx"></div>
-<div class="row" id="reg" style="margin-top:10px"></div></section>
+<section id="io" class="content-section">
+  <div class="section-kicker">06 / อุปกรณ์และการประมวลผล</div><h2>I/O, Storage และ Parallel</h2>
+  <h3>วิธีทำ I/O</h3><div class="table-wrap"><table><thead><tr><th>วิธี</th><th>การทำงาน</th></tr></thead><tbody><tr><td>Programmed I/O / polling</td><td>CPU คอยตรวจอุปกรณ์และจัดการโอนข้อมูลเอง</td></tr><tr><td>Interrupt-driven I/O</td><td>CPU ไปทำงานอื่นได้ แล้วอุปกรณ์ส่ง interrupt มาเรียก</td></tr><tr><td>DMA</td><td>CPU ตั้งค่าการโอน; DMA controller โอนระหว่างอุปกรณ์กับ RAM และแจ้งเมื่อเสร็จ</td></tr></tbody></table></div><p>DMA ยังต้องให้ CPU ตั้งค่าและจัดการผล Memory-mapped I/O ใช้ address space และคำสั่งอ่านเขียน memory ติดต่ออุปกรณ์ ส่วน isolated I/O ใช้พื้นที่ address และคำสั่ง I/O แยกต่างหาก</p>
+  <h3>HDD, SSD และ RAID</h3><div class="formula">เวลาเข้าถึง HDD ≈ seek + rotational delay + transfer</div><p>Seek = หัวอ่านเคลื่อนไป track; rotational delay = รอ sector หมุนมาถึง; transfer = อ่านหรือเขียนข้อมูล รวม controller หรือ queue delay เพิ่มถ้าโจทย์ให้มา</p><p>ที่ 7200 RPM หนึ่งรอบใช้ 60/7200 วินาที = 8.33 ms และรอเฉลี่ยครึ่งรอบ = <strong>4.17 ms</strong>. SSD ไม่มีจานหมุนและใช้ wear leveling เพื่อกระจายการเขียน/ลบ</p>
+  <ul><li><strong>RAID 0:</strong> กระจายข้อมูลเพื่อประสิทธิภาพ แต่ไม่มี redundancy</li><li><strong>RAID 1:</strong> ทำสำเนาแบบ mirror</li><li><strong>RAID 5:</strong> distributed parity ทนดิสก์เสียได้ 1 ลูก; ความจุใช้ได้ประมาณ (n−1) ลูก</li><li><strong>RAID 6:</strong> double parity ทนดิสก์เสียได้ 2 ลูก; ความจุใช้ได้ประมาณ (n−2) ลูก</li></ul><p>สูตรความจุข้างต้นสมมติว่าดิสก์มีขนาดเท่ากัน</p>
+  <h3>Parallel processing</h3><ul><li><strong>SISD:</strong> หนึ่งชุดคำสั่งกับหนึ่งชุดข้อมูล</li><li><strong>SIMD:</strong> หนึ่งชุดคำสั่งกับข้อมูลหลายชุด เช่น vector operations</li><li><strong>MIMD:</strong> หลายชุดคำสั่งกับข้อมูลหลายชุด เช่น multicore</li><li><strong>GPU:</strong> เหมาะกับงานที่ทำแบบเดียวกันกับข้อมูลจำนวนมาก</li><li><strong>Shared memory:</strong> ใช้พื้นที่หน่วยความจำร่วมกัน ต้องระวังการเข้าถึงพร้อมกันและใช้ synchronization</li><li><strong>Message passing:</strong> แต่ละเครื่องมี memory ของตนและส่งข้อความหากัน</li></ul><p>งานขนานไม่ได้เร็วขึ้นตามจำนวน processor เสมอ เพราะมีส่วนที่ต้องทำตามลำดับและต้นทุนการสื่อสาร</p>
+</section>
 
-<section class="sec" id="s6"><h2>ทดสอบความเข้าใจ</h2><div id="qz"></div><div class="card" id="qs"></div></section>
+<section id="process" class="content-section">
+  <div class="section-kicker">07 / ระบบปฏิบัติการ</div><h2>Operating Systems และ Process</h2><p>OS จัดสรร CPU, memory และอุปกรณ์; ให้บริการผ่าน system calls; ควบคุมสิทธิ์และป้องกันโปรแกรมรบกวนกัน รวมทั้งสลับ CPU ให้หลายโปรแกรมดูเหมือนทำงานพร้อมกัน</p>
+  <h3>Program กับ Process</h3><p><strong>Program</strong> คือชุดคำสั่งที่เก็บอยู่ ส่วน <strong>process</strong> คือโปรแกรมที่กำลังทำงานพร้อมสถานะและทรัพยากร มี code, data, heap, stack และสถานะ CPU เช่น PC และ registers. <strong>PCB</strong> เก็บข้อมูลที่ OS ใช้จัดการ process เช่น state, PC และ registers</p>
+  <h3>สถานะ process</h3><ul><li><strong>Ready:</strong> พร้อมทำงานแต่รอ CPU</li><li><strong>Running:</strong> กำลังใช้ CPU</li><li><strong>Blocked / Waiting:</strong> รอเหตุการณ์ เช่น I/O</li></ul><p>Ready → Running เมื่อได้ CPU; Running → Ready เมื่อหมดเวลาหรือถูกแย่ง CPU; Running → Blocked เมื่อขอ I/O; Blocked → Ready เมื่อ I/O เสร็จ จากนั้นจึงรอ scheduler เลือกอีกครั้ง</p><p><strong>Context switch</strong> คือ OS เก็บสถานะของ process เดิมและคืนสถานะของ process ใหม่ เพื่อให้ CPU สลับงานได้ โดยมี overhead</p>
+  <h3>System calls</h3><ul><li><code>fork()</code> สร้าง child process; parent ได้ PID ของลูก ส่วน child ได้ 0</li><li><code>exec()</code> เมื่อสำเร็จ นำโปรแกรมใหม่มาแทนโปรแกรมเดิมใน process เดิม ไม่ได้สร้าง process ใหม่</li><li><code>wait()</code> ให้ parent รอ child</li></ul><p>ถ้าไม่มีการกำหนดลำดับด้วย synchronization หรือ wait อย่าเดาว่า parent หรือ child จะพิมพ์ก่อน User mode จำกัดสิทธิ์ ส่วน kernel mode ให้ OS ทำงานที่มีสิทธิ์สูงกว่า; system call เปลี่ยนเข้าสู่ kernel เพื่อให้ OS จัดการ</p>
+</section>
 
-<script>
-const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-const tabs=["ข้อมูลวิชา","OS เบื้องต้น","Process","fork/wait/exec","System call","Context switch","แบบทดสอบ"];
-tabs.forEach((t,i)=>{const b=document.createElement("button");b.textContent=t;b.onclick=()=>go(i);$("#nav").append(b)});
-function go(i){$$(".sec").forEach((e,j)=>e.classList.toggle("on",i==j));$$("#nav button").forEach((e,j)=>e.classList.toggle("on",i==j));scrollTo(0,0);try{location.hash="t"+i}catch(e){}}
-go(+(location.hash.slice(2))||0);
-// generic button + detail picker
-function pick(bx,dx,items){items.forEach(([n,d],i)=>{const b=document.createElement("button");b.className="b";b.textContent=n;b.onclick=()=>{$$("#"+bx+" .b").forEach(x=>x.classList.remove("on"));b.classList.add("on");$("#"+dx).innerHTML=d};$("#"+bx).append(b)})}
-pick("comp","compd",[["1 Hardware","ให้ทรัพยากรการคำนวณพื้นฐาน: CPU, memory, I/O devices"],["2 Operating system","ควบคุมและประสานการใช้ฮาร์ดแวร์ระหว่างโปรแกรมต่างๆ ของผู้ใช้หลายคน"],["3 Application programs","กำหนดวิธีใช้ทรัพยากรระบบเพื่อแก้ปัญหา เช่น compiler, text editor, database system"],["4 Users","คน, เครื่องจักร, หรือคอมพิวเตอร์เครื่องอื่น"]]);
-$("#comp .b").click();
-pick("gen","gend",[["1 Human OS","Hardware: Mainframes · OS คือ <b>คนดูแลเครื่อง</b> ทำทีละ job (หน่วยงานหนึ่งชิ้น) เวลาเครื่องเสียเปล่าตอนคนเดินรอบห้อง"],["2 Batch","คนรับ punch cards (โปรแกรมจากผู้ใช้) ไปป้อนเครื่อง · <b>OS ตัวแรก: automatic job sequencing</b> ส่งต่อการควบคุมจาก job หนึ่งไปอีก job ลดเวลา setup โดยรวม job คล้ายกัน ใช้กับงานวิทยาศาสตร์/วิศวกรรม ภาษา FORTRAN และ Assembly · ขั้นตอน: เอาการ์ดไป 1401 → อ่านลง tape → เอา tape ไป 7094 คำนวณ → เอา tape ไป 1401 พิมพ์ผล"],["3 Multiprogramming","ฮาร์ดแวร์ถูก คนแพง · <b>Multiprogramming:</b> โหลดหลาย job เข้า memory แล้วสลับอย่างรวดเร็ว เพิ่ม CPU utilization (เช่น IBM System/360) · <b>Spooling</b> (Simultaneous Peripheral Operation On Line) ซ้อน I/O ของ job หนึ่งกับการคำนวณของอีก job: ระหว่างรัน job หนึ่ง OS อ่าน job ถัดไปจากเครื่องอ่านการ์ดลง disk (job queue/pool) และส่งผลของ job ก่อนหน้าไปพิมพ์ ช่วยให้ OS เลือก job ถัดไปได้"],["4 Personal Computer","ฮาร์ดแวร์ถูกมาก คนแพงมาก · <b>Multitasking</b> รันหลายโปรแกรมบนเครื่องเดียวพร้อมกัน · <b>Multiprocessing</b> ใช้หลาย processor บนเครื่องเดียว · เริ่มใช้ GUI"],["5 Mobile","Hardware: อุปกรณ์เล็ก · ข้อกำหนดเพิ่มของ OS: ประหยัดพลังงาน, UI ต่างออกไป, สื่อสารเครือข่ายไร้สาย · Mobile OS เป็น OS ที่ใช้มากที่สุด (ตั้งแต่ปี 2017)"]]);
-$("#gen .b").click();
-// stepper
-const S={fde:[["CPU","1. Fetch","ดึงคำสั่งจาก memory (ตำแหน่งที่ PC ชี้) เข้ามาเก็บใน IR (Instruction Register)"],["CPU","2. Decode","Decoder แปลคำสั่งใน IR เพื่อหาว่าต้องทำอะไร"],["CPU","3. Execute","ทำตามคำสั่ง เช่น ALU บวกเลขสองตัว"],["CPU","Repeat","PC ขยับไปคำสั่งถัดไป ทำซ้ำจนโปรแกรมจบ"]],
-sys:[["Kernel","ตอนบูต","OS สร้าง trap table บอกฮาร์ดแวร์ว่า syscall handler อยู่ที่ไหน ฮาร์ดแวร์จำที่อยู่ไว้"],["Kernel","เตรียม process","สร้าง entry ใน process list, จัดสรรและโหลดโปรแกรมลง memory, ตั้ง user stack ด้วย argv, เติม kernel stack ด้วย reg/PC แล้วสั่ง return-from-trap"],["HW","เข้า user mode","คืนค่า regs จาก kernel stack, ย้ายเป็น user mode, กระโดดไป main"],["User","รัน main()","โปรแกรมรันตามปกติด้วยสิทธิ์จำกัด"],["User","เรียก system call","โปรแกรมต้องการทำ privileged operation จึง trap เข้า OS"],["HW","Trap","เซฟ regs ลง kernel stack, ย้ายเป็น kernel mode, กระโดดไป trap handler"],["Kernel","จัดการ trap","handle trap ทำงานของ syscall จริงๆ แล้ว return-from-trap"],["HW","กลับ user mode","คืน regs จาก kernel stack, ย้ายเป็น user mode, กระโดดไป PC ถัดจาก trap"],["User","จบโปรแกรม","return จาก main แล้ว trap (ผ่าน exit()) → OS คืน memory ของ process และลบออกจาก process list"]],
-ctx:[["Kernel","ตอนบูต","OS สร้าง trap table; ฮาร์ดแวร์จำ address ของ syscall handler และ timer handler; OS เริ่ม interrupt timer (ขัดจังหวะ CPU ทุก X ms)"],["User","Process A รันอยู่","A ครอบครอง CPU ถ้า A วนลูปไม่รู้จบ ก็ไม่ยอมคืนเอง"],["HW","Timer interrupt","ฮาร์ดแวร์เซฟ regs(A) → k-stack(A), เข้า kernel mode, กระโดดไป trap handler"],["Kernel","switch()","OS เซฟ regs(A) → proc_t(A), คืน regs(B) ← proc_t(B), สลับไปใช้ k-stack(B)"],["Kernel","return-from-trap (into B)","คำสั่งเดิม แต่ตอนนี้กลับเข้า B ไม่ใช่ A"],["HW","คืน regs ของ B","regs(B) ← k-stack(B), ย้ายเป็น user mode, กระโดดไป PC ของ B"],["User","Process B รัน","A ถูกพักไว้ (Ready) รอรอบถัดไป"]]};
-const cls={Kernel:"k",User:"u",HW:"h",CPU:"h"};
-$$(".stp").forEach(el=>{const a=S[el.dataset.k];let i=0;el.className+=" card";el.innerHTML='<div class="row"><button class="b" data-d="-1">◀</button><button class="b" data-d="1">ถัดไป ▶</button><span class="out" style="flex:1;min-height:0">1/'+a.length+'</span></div><div class="bar" style="margin:8px 0"><i></i></div><div class="d"></div>';
-const r=()=>{const[m,t,d]=a[i];el.querySelector(".d").innerHTML='<span class="tag '+cls[m]+'">'+m+'</span> <b>'+t+'</b><br>'+d;el.querySelector(".out").textContent=(i+1)+"/"+a.length;el.querySelector(".bar i").style.width=(i+1)/a.length*100+"%";el.querySelectorAll("[data-d]")[0].disabled=i==0;el.querySelectorAll("[data-d]")[1].disabled=i==a.length-1;if(el.dataset.k=="ctx")reg(i)};
-el.querySelectorAll("[data-d]").forEach(b=>b.onclick=()=>{i+=+b.dataset.d;r()});r()});
-function reg(i){const run=i<=2?"A":i>=5?"B":"-",cpu=i<=2?"regs(A)":i>=5?"regs(B)":i==3?"กำลังสลับ":"regs(B) พร้อม";$("#reg").innerHTML='<span class="tag h">CPU ถือ: '+cpu+'</span><span class="tag '+(i>=2&&i<=4?"k":"u")+'">'+(i>=2&&i<=4?"kernel mode":"user mode")+'</span><span class="tag u">กำลังรัน: '+run+'</span>'}
-// segments
-const SG={stack:"ข้อมูลชั่วคราว: return address, ค่า parameter ในการเรียกฟังก์ชัน, ตัวแปรโลคัล (โตลงมา)",heap:"หน่วยความจำที่จัดสรรแบบ dynamic ระหว่าง process รัน (โตขึ้นไป)",data:"ตัวแปร global",text:"คำสั่ง (code) ของโปรแกรม"};
-$$(".seg[data-s]").forEach(e=>e.onclick=()=>{$$(".seg").forEach(x=>x.classList.remove("on"));e.classList.add("on");$("#segd").textContent=SG[e.dataset.s]});
-// states
-const T=[["Scheduled","Ready","Running"],["Descheduled","Running","Ready"],["I/O: initiate","Running","Blocked"],["I/O: done","Blocked","Ready"]];let cur="Ready";
-["Running","Ready","Blocked"].forEach(s=>{$("#stt").insertAdjacentHTML("beforeend",'<div class="st" data-s="'+s+'">'+s+'</div>')});
-function rs(msg){$$(".st").forEach(e=>e.classList.toggle("on",e.dataset.s==cur));$$("#stb .b").forEach((b,i)=>b.disabled=T[i][1]!=cur);$("#stn").textContent=msg||"อยู่ที่ "+cur+" · กดปุ่มที่ใช้ได้เพื่อเปลี่ยนสถานะ"}
-T.forEach((t,i)=>{const b=document.createElement("button");b.className="b";b.textContent=t[0]+" ("+t[1]+"→"+t[2]+")";b.onclick=()=>{cur=t[2];rs(t[0]+": ไปที่ "+cur)};$("#stb").append(b)});rs();
-// timeline
-const TL=[["Running","Ready",""],["Running","Ready",""],["Running","Ready","Process0 เริ่ม I/O"],["Blocked","Running","Process0 blocked จึงให้ Process1 รัน"],["Blocked","Running",""],["Blocked","Running",""],["Ready","Running","I/O เสร็จ (Process0 กลับเป็น Ready)"],["Ready","Running","Process1 เสร็จ"],["Running","–",""],["Running","–","Process0 เสร็จ"]];
-function rt(){const t=+$("#tl").value;$("#tlo").innerHTML='<table><tr><th>เวลา</th><th>Process0</th><th>Process1</th><th>หมายเหตุ</th></tr><tr><td>'+t+'</td><td>'+TL[t-1][0]+'</td><td>'+TL[t-1][1]+'</td><td>'+TL[t-1][2]+'</td></tr></table>'}$("#tl").oninput=rt;rt();
-// PCB
-pick("pcbb","pcbd",[["Process management","Registers, program counter, program status word, stack pointer, process state, priority, scheduling parameters, process ID, parent process, process group, signals, เวลาที่เริ่ม, CPU time ที่ใช้, CPU time ของลูก, เวลา alarm ถัดไป"],["Memory management","pointer ไปยัง text segment, data segment, stack segment"],["File management","root directory, working directory, file descriptors, user ID, group ID"],["ภาพรวม","PCB เก็บ: program counter, registers, state, priority, address space, open files, other flags"]]);$("#pcbb .b").click();
-// fork
-const FO=[" PID of this process is 2326"," create a process"," I am a parent process with PID = 2326 of child process 2327"," I am a child process with PID = 2327"," My parent process with PID = 2326"];let fi=0;
-$("#fk").onclick=()=>{if(fi<FO.length)$("#fko").innerHTML+=(fi?"<br>":"")+FO[fi++]};$("#fk").textContent="▶ พิมพ์ทีละบรรทัด";$("#fkr").onclick=()=>{fi=0;$("#fko").innerHTML=""};
-function rf(){const n=+$("#fn").value;$("#fnv").textContent=n+" ครั้ง → "+2**n+" process";$("#fnb").innerHTML=Array.from({length:2**n},(_,i)=>'<span class="tag '+(i?"u":"h")+'">P'+i+'</span>').join("")}$("#fn").oninput=rf;rf();
-// quiz
-const Q=[["fork() คืนค่าอะไรให้ child process?",["PID ของ parent","0","PID ของ child","-1"],1,"parent ได้ PID ของ child ส่วน child ได้ 0"],["exec() ทำอะไร?",["สร้าง process ใหม่","ทำสำเนา process","เปลี่ยน process ปัจจุบันเป็นโปรแกรมอื่น","รอ child จบ"],2,"exec ไม่สร้าง process ใหม่ และถ้าสำเร็จจะไม่ return"],["ทำไม OS ต้องใช้ timer interrupt?",["ให้โปรแกรมเร็วขึ้น","ดึง CPU กลับ แม้ process วนลูปไม่รู้จบ","เพิ่ม memory","เซฟไฟล์"],1,"ไม่ต้องรอให้ process ยอมคืน CPU เอง"],["process ที่รอ I/O อยู่อยู่ในสถานะใด?",["Running","Ready","Blocked","Zombie"],2,"Blocked = รอเหตุการณ์ เช่น I/O"],["ตัวแปร global อยู่ส่วนใดของ address space?",["stack","heap","data","text"],2,"stack = ตัวแปรโลคัล, heap = dynamic memory, text = code"],["Trap ทำให้เกิดอะไร?",["สลับ user mode เป็น kernel mode","ลบ process","ล้าง memory","ปิดเครื่อง"],0,"โปรแกรมตั้งใจ trap เพื่อให้ OS ทำ system call ที่ได้รับการป้องกัน"],["Program กับ Process ต่างกันอย่างไร?",["เหมือนกัน","Process คือ program ที่กำลังรัน","Program คือ process ที่หยุด","Process อยู่ใน disk เท่านั้น"],1,"Program = ลำดับคำสั่งบน disk · Process = โปรแกรมที่ถูกโหลดและกำลังรัน"]];let sc=0,an=0;
-Q.forEach((q,i)=>{const d=document.createElement("div");d.className="card";d.innerHTML="<b>"+(i+1)+". "+q[0]+"</b><div class='row' style='margin-top:6px'></div><div></div>";q[1].forEach((o,j)=>{const b=document.createElement("button");b.className="b";b.textContent=o;b.onclick=()=>{if(d.dataset.done)return;d.dataset.done=1;an++;const ok=j==q[2];if(ok)sc++;b.classList.add("on");d.lastChild.innerHTML=ok?"<span class='ok'>ถูก</span> "+q[3]:"<span class='no'>ยังไม่ถูก</span> "+q[3];$("#qs").textContent="ตอบแล้ว "+an+"/"+Q.length+" · คะแนน "+sc};d.children[1].append(b)});$("#qz").append(d)});$("#qs").textContent="ตอบแล้ว 0/"+Q.length;
-</script></main></body></html>
+<section id="scheduling" class="content-section">
+  <div class="section-kicker">08 / โจทย์คำนวณ</div><h2>CPU Scheduling ⭐</h2><p>Scheduler เลือก process ใน ready queue ที่จะได้ CPU ต่อไป โจทย์ควรเริ่มด้วยการวาด <strong>Gantt chart</strong> แล้วหาค่าเวลาของแต่ละ process</p>
+  <h3>สูตรจำเป็น</h3><p>ให้ A = arrival time, B = CPU burst, C = completion time และ S = เวลาที่ได้ CPU ครั้งแรก</p><div class="formula">Turnaround = C − A<br>Response = S − A<br>Waiting = เวลารวมที่รอใน ready queue</div><p>ถ้ามี CPU burst อย่างเดียว ไม่มี I/O หรือ overhead: <strong>waiting = turnaround − burst</strong>. หากมี I/O ต้องนับเวลาที่อยู่ใน ready queue แทน</p>
+  <h3>เปรียบเทียบ FCFS, SJF และ Round Robin</h3><p>ตัวอย่างทุก process มาถึงเวลา 0 และลำดับเริ่มต้น P1, P2, P3: burst ของ P1 = 8, P2 = 4, P3 = 2</p>
+  <h4>FCFS: ใครมาก่อนรันก่อน</h4><pre><code>เวลา  0         8       12    14
+      |--- P1 ---|-- P2 --| P3 |</code></pre><p>Waiting ของ P1 = 0, P2 = 8, P3 = 12 → เฉลี่ย (0 + 8 + 12) ÷ 3 = <strong>6.67</strong></p>
+  <h4>SJF: งานสั้นที่สุดก่อน</h4><pre><code>เวลา  0    2       6          14
+      | P3 |-- P2 --|--- P1 ---|</code></pre><p>Waiting ของ P3 = 0, P2 = 2, P1 = 6 → เฉลี่ย (0 + 2 + 6) ÷ 3 = <strong>2.67</strong> หาก arrival ต่างกัน เลือกเฉพาะงานที่มาถึงแล้ว</p>
+  <h4>Round Robin: quantum = 2</h4><pre><code>เวลา  0   2   4   6   8   10  12  14
+      |P1 |P2 |P3 |P1 |P2 |P1 |P1 |</code></pre><p>P3 เสร็จเวลา 6 → รอ 6 − 2 = 4; P2 เสร็จเวลา 10 → รอ 10 − 4 = 6; P1 เสร็จเวลา 14 → รอ 14 − 8 = 6. Waiting เฉลี่ย = (4 + 6 + 6) ÷ 3 = <strong>5.33</strong></p>
+  <div class="table-wrap"><table><thead><tr><th>วิธี</th><th>หลักการและข้อควรจำ</th></tr></thead><tbody><tr><td>FCFS / FIFO</td><td>มาก่อนรันก่อน งานสั้นอาจรอหลังงานยาว เรียก convoy effect</td></tr><tr><td>SJF</td><td>เลือก burst สั้นที่สุดในงานที่พร้อม เป็นแบบ non-preemptive</td></tr><tr><td>STCF / SRTF</td><td>เลือกงานที่เหลือเวลาน้อยที่สุด เป็นแบบ preemptive</td></tr><tr><td>Priority</td><td>เลือก priority สูงก่อน งาน priority ต่ำอาจเกิด starvation</td></tr><tr><td>Round Robin</td><td>สลับตาม quantum; quantum เล็กมากเพิ่ม overhead</td></tr><tr><td>MLFQ</td><td>หลายคิวและ priority งานใช้ CPU มากอาจถูกลดระดับ มี boost ลด starvation</td></tr></tbody></table></div><p><strong>Preemptive</strong> คือ OS แย่ง CPU ก่อนงานเสร็จได้; <strong>non-preemptive</strong> คือโดยหลักรันต่อจนเสร็จหรือยอมปล่อย CPU</p>
+  <aside class="callout">ตัวอย่าง Round Robin บางหน้าในสไลด์มีข้อความระบุ burst ไม่สอดคล้องกับแผนภาพ ให้ยึดการวาดเส้นเวลาและคำนวณจากตัวเลขโจทย์</aside>
+</section>
+
+<section id="quiz" class="content-section">
+  <div class="section-kicker">09 / ลองทำด้วยตัวเอง</div><h2>ทดสอบตัวเอง</h2><p>ลองตอบก่อน แล้วกดเปิดเฉลยทีละข้อ</p>
+  <div class="quiz-list">
+    <details><summary>01 · 1010₂ เท่ากับเท่าไรในฐานสิบ?</summary><p><strong>10</strong> เพราะ 8 + 2 = 10</p></details>
+    <details><summary>02 · −5 ใน two’s complement แบบ 8 บิตคืออะไร?</summary><p><strong>1111 1011</strong> เริ่มจาก 0000 0101 กลับบิต แล้วบวก 1</p></details>
+    <details><summary>03 · Signed two’s complement 8 บิตมีช่วงค่าเท่าไร?</summary><p><strong>−128 ถึง 127</strong></p></details>
+    <details><summary>04 · lw x5, 8(x6) ทำอะไร?</summary><p>อ่าน word 4 bytes จาก memory ที่ address <code>x6 + 8</code> เข้า <code>x5</code></p></details>
+    <details><summary>05 · CPU ทำงาน 1 พันล้านคำสั่ง, CPI 2, clock 2 GHz ใช้เวลากี่วินาที?</summary><p><strong>1 วินาที</strong> จาก instruction count × CPI ÷ clock rate</p></details>
+    <details><summary>06 · Hit time 2 ns, miss rate 10%, miss penalty 30 ns: AMAT เท่าไร?</summary><p>2 + 0.1 × 30 = <strong>5 ns</strong></p></details>
+    <details><summary>07 · Pipeline 5 ขั้น ทำ 20 คำสั่งโดยไม่มี stall ใช้กี่ cycles?</summary><p>20 + 5 − 1 = <strong>24 cycles</strong></p></details>
+    <details><summary>08 · Process รอ I/O อยู่สถานะใด? เมื่อ I/O เสร็จไปสถานะใด?</summary><p><strong>Blocked → Ready</strong> แล้วรอ scheduler เลือก</p></details>
+    <details><summary>09 · fork() กับ exec() ต่างกันอย่างไร?</summary><p><code>fork()</code> สร้าง process ลูก; <code>exec()</code> แทนโปรแกรมใน process เดิม</p></details>
+    <details><summary>10 · มาถึงเวลา 2 เริ่มใช้ CPU เวลา 5 เสร็จเวลา 12 ใช้ CPU 6 หน่วย ไม่มี I/O: turnaround, response และ waiting เท่าไร?</summary><p>Turnaround = 12 − 2 = <strong>10</strong>; response = 5 − 2 = <strong>3</strong>; waiting = 10 − 6 = <strong>4</strong></p></details>
+    <details><summary>11 · RAID 0 กับ RAID 1 ต่างกันอย่างไร?</summary><p>RAID 0 กระจายข้อมูลและไม่มี redundancy; RAID 1 ทำสำเนาแบบ mirror</p></details>
+    <details><summary>12 · คำสั่งหนึ่งต้องรอผลของคำสั่งก่อนหน้าเป็น hazard ชนิดใด?</summary><p><strong>Data hazard</strong></p></details>
+  </div>
+</section>
+
+<section id="cheatsheet" class="content-section">
+  <div class="section-kicker">ทบทวนครั้งสุดท้าย</div><h2>ชีทจำก่อนเข้าห้องสอบ</h2><pre><code>CPU time       = instruction count × CPI / clock rate
+Speedup        = เวลาเดิม / เวลาใหม่
+AMAT           = hit time + miss rate × miss penalty
+Pipeline       = N + k − 1 cycles เมื่อไม่มี stall
+Turnaround     = completion − arrival
+Response       = first start − arrival
+Waiting        = turnaround − burst เฉพาะกรณีไม่มี I/O/overhead
+
+2's complement = กลับบิต + 1
+Cache address  = tag | index | offset
+Pipeline       = IF → ID → EX → MEM → WB
+Process        = Ready → Running → Blocked → Ready</code></pre><p>ถ้าติดข้อคำนวณ ให้เขียนสูตร ใส่หน่วย และวาดเส้นเวลาหรือตารางก่อน จะช่วยให้ตรวจความผิดพลาดได้ง่ายขึ้น</p>
+  <p class="source-note">สรุปจากสไลด์ ITDS211 Computer Architecture บท 01–08 และ Operating Systems Lecture 1–3 เนื้อหานี้เป็นคู่มือเร่งด่วน ไม่สามารถรับประกันหัวข้อที่จะออกสอบได้</p>
+</section>
+</div><footer class="footer">สรุปเพื่อทบทวนจากเอกสารประกอบรายวิชา ITDS211 · ตรวจสอบเงื่อนไขของสูตรกับโจทย์ทุกครั้ง</footer></main></div><script>window.addEventListener('beforeprint',()=>document.querySelectorAll('details').forEach(d=>{d.dataset.wasOpen=d.open?'1':'0';d.open=true}));window.addEventListener('afterprint',()=>document.querySelectorAll('details').forEach(d=>{if(d.dataset.wasOpen==='0')d.open=false;delete d.dataset.wasOpen}));</script></body></html>
